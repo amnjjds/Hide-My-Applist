@@ -44,7 +44,7 @@ jobs:
           echo keyPassword='${{ secrets.ALIAS_KEY_PASSWORD }}' >> local.properties
           echo fileDir=`pwd`/key.jks >> local.properties
           echo "${{ secrets.KEY_STORE }}" | base64 --decode > key.jks
-          
+
       - name: Cache gradle
         uses: actions/cache@v3
         with:
